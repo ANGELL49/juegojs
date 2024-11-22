@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel y Tijeras</title>
+  <link rel="stylesheet" href="juegoStyle.css">
+</head>
+<body>
+
+    <div class="contenedor">
+    <!--Menu Principal-->
+    <div id="menuPrincipal" class="view active">
+        <h1>¡Bienvenido al juego Piedra, Papel o Tijera!</h1>
+        <button id="iniciarJ" class="botton-menu">Comenzar</button>
+    </div>
+
+        <!--Inicio sesion-->
+        <form id="formInicioSesion" class="view hidden">
+            <h2>Inicio de Sesión</h2>
+            <input type="email" id="correo" placeholder="Correo" required>
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+            <p>¿No tienes cuenta? <a href="#" id="linkRegistro">Regístrate</a></p>
+        </form>
+
+        <!--Registro-->
+        <form id="formRegistroUsuario" class="view hidden">
+            <h2>Registro</h2>
+            <input type="text" id="registroNombre" placeholder="Nombre" required>
+            <input type="email" id="registroCorreo" placeholder="Correo" required>
+            <input type="password" id="registroContraseña" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" id="linkInicioSesion">Inicia Sesión</a></p>
+        </form>
+
+    <!--Juego-->
+    <div id="juegoContenedor" class="view hidden">
+      <h2 id="mensajeBienvenida">Iniciamos!</h2>
+      <div id="mensajeElecciones"></div> <!-- Contenedor para mostrar elecciones -->
+      <div class="elige">
+          <button class="elegir" data-elegir="piedra">Piedra 💎</button>
+          <button class="elegir" data-elegir="papel">Papel 📋</button>
+          <button class="elegir" data-elegir="tijeras">Tijeras ✂</button>
+      </div>
+      <div class="resultado">
+          <p id="puntaje">Triunfos: 0 | Pérdidas: 0</p>
+      </div>
+      <br>
+      <button id="cerrarSesion">Cerrar sesión</button>
+    </div>
+  </div>
+</div>
+  <script src="juegopoo.js"></script>
+</body>
+</html>
